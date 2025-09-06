@@ -409,3 +409,8 @@ def get_order_items(order_id: int, db: Session = Depends(get_db)):
         f"Order Service: Retrieved {len(order.items)} items for order {order_id}."
     )
     return order.items
+
+    @app.get("/me", summary="Print student ID")
+    async def print_student_id():
+        return {"student_id": "s224009373"}
+    
