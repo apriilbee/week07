@@ -414,3 +414,6 @@ def get_order_items(order_id: int, db: Session = Depends(get_db)):
     async def print_student_id():
         return {"student_id": "s224009373"}
     
+    @app.get("/name", summary="Print student name")
+    async def print_name():
+        return {"name": "April B."}
